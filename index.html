@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Página de Login com AutoSave</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <h1 class="logo">User<span>Manager</span></h1>
+    <button id="logoutBtn" class="logout-btn hidden">Logout</button>
+  </header>
+
+  <!-- LOGIN VIEW -->
+  <section id="login" class="view auth-view">
+    <div class="card">
+      <h2>Login</h2>
+      <form id="loginForm">
+        <input type="email" placeholder="E-mail" required />
+        <input type="password" placeholder="Senha" required />
+        <button type="submit">Entrar</button>
+      </form>
+      <p>Não tem conta? <span id="goRegister" class="link">Registrar</span></p>
+    </div>
+  </section>
+
+  <!-- REGISTER VIEW -->
+  <section id="register" class="view auth-view hidden">
+    <div class="card">
+      <h2>Registrar</h2>
+      <form id="registerForm">
+        <input type="text" placeholder="Nome" required />
+        <input type="email" placeholder="E-mail" required />
+        <input type="password" placeholder="Senha" required />
+        <button type="submit">Criar Conta</button>
+      </form>
+      <p>Já tem conta? <span id="goLogin" class="link">Login</span></p>
+    </div>
+  </section>
+
+  <!-- DASHBOARD VIEW -->
+  <section id="dashboard" class="view hidden">
+    <div class="dashboard-container">
+
+      <div class="dashboard-header">
+        <h2>Seus Contatos</h2>
+        <div class="dashboard-actions">
+          <button id="exportBtn">Exportar</button>
+          <label class="import-label">
+            Importar
+            <input type="file" id="importFile" hidden>
+          </label>
+        </div>
+      </div>
+
+      <form id="contactForm" class="contact-form">
+        <input type="text" placeholder="Nome" required />
+        <input type="email" placeholder="E-mail" required />
+        <input type="text" placeholder="Telefone" />
+        <button type="submit">Adicionar</button>
+      </form>
+
+      <div id="contactsList" class="contacts-list">
+        <!-- contatos renderizados aqui -->
+      </div>
+
+    </div>
+  </section>
+
+  <script src="storageService.js"></script>
+  <script src="auth.js"></script>
+  <script src="dashboard.js"></script>
+  <script src="app.js"></script>
+
+</body>
+</html>
