@@ -8,7 +8,7 @@
 
 A practice exercise on a feature of the JavaScript language called LocalStorage, which involves saving small amounts of data directly in the browser. In this small project, it is applied to a login page.
 
-Project link: https://github.io
+Project link: https://guilhermejaraujo15.github.io/LocalStorage3/
 
 ### Project Objective
 Develop a Single-Page Application (SPA) that allows user registration and login. After logging in, the user is directed to a dashboard where they can view and manage a contact list. The application must be secure, well-structured, and demonstrate development best practices.
@@ -51,7 +51,7 @@ The project is divided into multiple files for better organization:
 
 Treino da vertente da linguagem JavaScript denominada LocalStorage, que diz respeito ao salvamento de pequenos dados no navegador. Neste pequeno projeto, o conceito é aplicado a uma página de Login.
 
-Link do projeto: https://github.io
+Link do projeto: https://guilhermejaraujo15.github.io/LocalStorage3/
 
 ### Objetivo do Projeto
 Desenvolver uma Single-Page Application (SPA) que permita o registro e o login de usuários. Após o login, o usuário é direcionado para um dashboard onde pode ver e gerenciar uma lista de contatos. A aplicação deve ser segura, bem estruturada e demonstrar as melhores práticas aprendidas.
