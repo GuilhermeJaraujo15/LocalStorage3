@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-i18n="pageTitle">Página de Login com AutoSave</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <h1 class="logo">User<span>Manager</span></h1>
+    <div class="header-actions">
+      <button id="languageToggle" class="language-toggle" type="button" aria-label="Switch language" aria-pressed="false">EN</button>
+      <button id="logoutBtn" class="logout-btn hidden" data-i18n="logout">Sair</button>
+    </div>
+  </header>
+
+  <!-- LOGIN VIEW -->
+  <section id="login" class="view auth-view">
+    <div class="card">
+      <h2 data-i18n="loginTitle">Entrar</h2>
+      <form id="loginForm" novalidate>
+        <input type="email" placeholder="E-mail" data-i18n-placeholder="email" autocomplete="email" required />
+        <input type="password" placeholder="Senha" data-i18n-placeholder="password" autocomplete="current-password" required />
+        <button type="submit" data-i18n="loginButton">Entrar</button>
+      </form>
+      <p><span data-i18n="noAccount">Não tem conta?</span> <button id="goRegister" class="link" type="button" data-i18n="register">Registrar</button></p>
+    </div>
+  </section>
+
+  <!-- REGISTER VIEW -->
+  <section id="register" class="view auth-view hidden">
+    <div class="card">
+      <h2 data-i18n="registerTitle">Criar conta</h2>
+      <form id="registerForm" novalidate>
+        <input type="text" placeholder="Nome" data-i18n-placeholder="name" autocomplete="name" required />
+        <input type="email" placeholder="E-mail" data-i18n-placeholder="email" autocomplete="email" required />
+        <input type="password" placeholder="Senha" data-i18n-placeholder="password" autocomplete="new-password" required />
+        <button type="submit" data-i18n="createAccount">Criar conta</button>
+      </form>
+      <p><span data-i18n="hasAccount">Já tem conta?</span> <button id="goLogin" class="link" type="button" data-i18n="login">Entrar</button></p>
+    </div>
+  </section>
+
+  <!-- DASHBOARD VIEW -->
+  <section id="dashboard" class="view hidden">
+    <div class="dashboard-container">
+
+      <div class="dashboard-header">
+        <h2 data-i18n="yourContacts">Seus contatos</h2>
+        <div class="dashboard-actions">
+          <button id="exportBtn" data-i18n="export">Exportar</button>
+          <label class="import-label">
+            <span data-i18n="import">Importar</span>
+            <input type="file" id="importFile" hidden>
+          </label>
+        </div>
+      </div>
+
+      <form id="contactForm" class="contact-form" novalidate>
+        <input type="text" placeholder="Nome" data-i18n-placeholder="name" autocomplete="name" required />
+        <input type="email" placeholder="E-mail" data-i18n-placeholder="email" autocomplete="email" required />
+        <input type="tel" placeholder="Telefone" data-i18n-placeholder="phone" autocomplete="tel" />
+        <button type="submit" data-i18n="add">Adicionar</button>
+      </form>
+
+      <div id="contactsList" class="contacts-list">
+        <!-- contatos renderizados aqui -->
+      </div>
+
+    </div>
+  </section>
+
+  <script src="i18n.js"></script>
+  <script src="storageService.js"></script>
+  <script src="auth.js"></script>
+  <script src="dashboard.js"></script>
+  <script src="app.js"></script>
+
+</body>
+</html>
